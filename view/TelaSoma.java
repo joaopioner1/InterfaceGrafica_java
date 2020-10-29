@@ -16,11 +16,12 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class TelaSoma extends JFrame {
-
+	//Autor: Joao Vitor Souza Pioner | Data: 29/10/2020
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField txtNumber1;
 	private JTextField txtNumber2;
+	private JTextField txtResult;
 
 	/**
 	 * Launch the application.
@@ -43,7 +44,7 @@ public class TelaSoma extends JFrame {
 	 */
 	public TelaSoma() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 191);
+		setBounds(100, 100, 527, 191);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -89,11 +90,23 @@ public class TelaSoma extends JFrame {
 				
 				int soma = c + d;
 				
-				JOptionPane.showMessageDialog(null, "Sum: " + soma);
+				JLabel lblResult = new JLabel("");
+				lblResult.setBounds(361, 63, 76, 27); //LBL QUE MOSTRA OS NUMEROS
+				contentPane.add(lblResult);
+				
+				lblResult.setText(String.valueOf(soma));
 			}
 		});
 		btnSum.setBounds(155, 118, 89, 23);
 		contentPane.add(btnSum);
+		
+		JLabel lblEqual = new JLabel(" =");
+		lblEqual.setBounds(335, 70, 16, 14);
+		contentPane.add(lblEqual);
+		
+	
+		
+		
 	}
 
 }
