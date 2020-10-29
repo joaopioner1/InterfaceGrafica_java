@@ -1,2 +1,2 @@
 # InterfaceGrafica_java
-I am going to put begginer codes in java swing.
+I am learning how to create a interface grafica on Java.
