@@ -2,6 +2,7 @@ package view;
 
 import java.awt.EventQueue;
 
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -13,8 +14,11 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
 
+import view.Var; 
+
 public class TelaCalc extends JFrame {
 	//Autor: Joao Vitor Souza Pioner | Data: 29/10/2020
+	
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField txtNumber1;
@@ -34,6 +38,7 @@ public class TelaCalc extends JFrame {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -45,10 +50,9 @@ public class TelaCalc extends JFrame {
 			}
 		});
 	}
+	
+	Var var = new Var();
 
-	/**
-	 * Create the frame.
-	 */
 	public TelaCalc() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 527, 374);
@@ -201,12 +205,12 @@ public class TelaCalc extends JFrame {
 				double p = Integer.parseInt(n);
 				double q = Integer.parseInt(o);
 				
-				double soma = c + d;
+				var.operac = c + d;
 				double min = h - i;
 				double mul = l * m;
 				double div = p / q;
 				
-				txtResult1.setText(String.valueOf(soma)); //Imprime o numero da soma dentro da TxtBox
+				txtResult1.setText(String.valueOf(var.operac)); //Imprime o numero da soma dentro da TxtBox
 				txtResult2.setText(String.valueOf(min));
 				txtResult3.setText(String.valueOf(mul));
 				txtResult4.setText(String.valueOf(div));
