@@ -14,8 +14,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
 
-import view.Var; 
-
 public class TelaCalc extends JFrame {
 	//Autor: Joao Vitor Souza Pioner | Data: 29/10/2020
 	
@@ -50,8 +48,6 @@ public class TelaCalc extends JFrame {
 			}
 		});
 	}
-	
-	Var var = new Var();
 
 	public TelaCalc() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -93,13 +89,19 @@ public class TelaCalc extends JFrame {
 		contentPane.add(lblEqual);
 		
 		txtResult1 = new JTextField();
-		txtResult1.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		txtResult1.setBackground(Color.DARK_GRAY);
+		txtResult1.setEnabled(false);
+		txtResult1.setForeground(Color.WHITE);
+		txtResult1.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		txtResult1.setColumns(10);
 		txtResult1.setBounds(361, 63, 97, 27);
 		contentPane.add(txtResult1);
 		
 		txtResult2 = new JTextField();
-		txtResult2.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		txtResult2.setBackground(Color.DARK_GRAY);
+		txtResult2.setEnabled(false);
+		txtResult2.setForeground(Color.RED);
+		txtResult2.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		txtResult2.setColumns(10);
 		txtResult2.setBounds(361, 111, 97, 27);
 		contentPane.add(txtResult2);
@@ -113,6 +115,7 @@ public class TelaCalc extends JFrame {
 		txtNumber2_.setColumns(10);
 		txtNumber2_.setBounds(228, 111, 97, 27);
 		contentPane.add(txtNumber2_);
+		txtNumber2_.setDocument(new JustNumbers());
 		
 		JLabel lblNewLabel_1 = new JLabel("-");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
@@ -124,9 +127,13 @@ public class TelaCalc extends JFrame {
 		txtNumber2.setColumns(10);
 		txtNumber2.setBounds(70, 111, 97, 27);
 		contentPane.add(txtNumber2);
+		txtNumber2_.setDocument(new JustNumbers());
 		
 		txtResult3 = new JTextField();
-		txtResult3.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		txtResult3.setBackground(Color.DARK_GRAY);
+		txtResult3.setEnabled(false);
+		txtResult3.setForeground(Color.RED);
+		txtResult3.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		txtResult3.setColumns(10);
 		txtResult3.setBounds(361, 161, 97, 27);
 		contentPane.add(txtResult3);
@@ -140,6 +147,7 @@ public class TelaCalc extends JFrame {
 		txtNumber3_.setColumns(10);
 		txtNumber3_.setBounds(228, 161, 97, 27);
 		contentPane.add(txtNumber3_);
+		txtNumber3_.setDocument(new JustNumbers());
 		
 		JLabel lblNewLabel_2 = new JLabel("x");
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 13));
@@ -151,9 +159,13 @@ public class TelaCalc extends JFrame {
 		txtNumber3.setColumns(10);
 		txtNumber3.setBounds(70, 161, 97, 27);
 		contentPane.add(txtNumber3);
+		txtNumber3.setDocument(new JustNumbers());
 		
 		txtResult4 = new JTextField();
-		txtResult4.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		txtResult4.setBackground(Color.DARK_GRAY);
+		txtResult4.setEnabled(false);
+		txtResult4.setForeground(Color.RED);
+		txtResult4.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		txtResult4.setColumns(10);
 		txtResult4.setBounds(361, 209, 97, 27);
 		contentPane.add(txtResult4);
@@ -167,6 +179,7 @@ public class TelaCalc extends JFrame {
 		txtNumber4_.setColumns(10);
 		txtNumber4_.setBounds(228, 209, 97, 27);
 		contentPane.add(txtNumber4_);
+		txtNumber4_.setDocument(new JustNumbers());
 		
 		JLabel lblNewLabel_3 = new JLabel("/");
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 13));
@@ -178,6 +191,7 @@ public class TelaCalc extends JFrame {
 		txtNumber4.setColumns(10);
 		txtNumber4.setBounds(70, 209, 97, 27);
 		contentPane.add(txtNumber4);
+		txtNumber4.setDocument(new JustNumbers());
 		
 		JButton btnSum = new JButton("Calc");
 		btnSum.setFont(new Font("Tahoma", Font.PLAIN, 13));
@@ -205,12 +219,12 @@ public class TelaCalc extends JFrame {
 				double p = Integer.parseInt(n);
 				double q = Integer.parseInt(o);
 				
-				var.operac = c + d;
+				double soma  = c + d;
 				double min = h - i;
 				double mul = l * m;
 				double div = p / q;
 				
-				txtResult1.setText(String.valueOf(var.operac)); //Imprime o numero da soma dentro da TxtBox
+				txtResult1.setText(String.valueOf(soma)); //Imprime o numero da soma dentro da TxtBox
 				txtResult2.setText(String.valueOf(min));
 				txtResult3.setText(String.valueOf(mul));
 				txtResult4.setText(String.valueOf(div));
