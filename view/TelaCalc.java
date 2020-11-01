@@ -59,11 +59,51 @@ public class TelaCalc extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		// LABELS
 		JLabel lblNumber1 = new JLabel("Enter numbers:");
 		lblNumber1.setForeground(new Color(255, 255, 255));
 		lblNumber1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		lblNumber1.setBounds(70, 11, 138, 22);
 		contentPane.add(lblNumber1);
+		
+		JLabel lblNewLabel = new JLabel("+");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblNewLabel.setBounds(196, 70, 27, 14);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblEqual = new JLabel(" = ");
+		lblEqual.setBounds(335, 70, 16, 14);
+		contentPane.add(lblEqual);
+		
+		JLabel lblEqual_1 = new JLabel(" = ");
+		lblEqual_1.setBounds(335, 118, 16, 14);
+		contentPane.add(lblEqual_1);
+		
+		JLabel lblNewLabel_1 = new JLabel("-");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblNewLabel_1.setBounds(196, 118, 27, 14);
+		contentPane.add(lblNewLabel_1);
+		
+		JLabel lblEqual_2 = new JLabel(" = ");
+		lblEqual_2.setBounds(335, 168, 16, 14);
+		contentPane.add(lblEqual_2);
+		
+		JLabel lblNewLabel_2 = new JLabel("x");
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblNewLabel_2.setBounds(196, 168, 27, 14);
+		contentPane.add(lblNewLabel_2);
+		
+		JLabel lblEqual_3 = new JLabel(" = ");
+		lblEqual_3.setBounds(335, 216, 16, 14);
+		contentPane.add(lblEqual_3);
+		
+		JLabel lblNewLabel_3 = new JLabel("/");
+		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblNewLabel_3.setBounds(196, 216, 27, 14);
+		contentPane.add(lblNewLabel_3);
+		
+		// TextBoxs
+		// Caixas editaveis
 		
 		txtNumber1 = new JTextField();
 		txtNumber1.setFont(new Font("Tahoma", Font.PLAIN, 13));
@@ -79,14 +119,49 @@ public class TelaCalc extends JFrame {
 		contentPane.add(txtNumber1_);
 		txtNumber1_.setDocument(new JustNumbers()); //Aceita apenas numbers
 		
-		JLabel lblNewLabel = new JLabel("+");
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		lblNewLabel.setBounds(196, 70, 27, 14);
-		contentPane.add(lblNewLabel);
+		txtNumber2 = new JTextField();
+		txtNumber2.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		txtNumber2.setColumns(10);
+		txtNumber2.setBounds(70, 111, 97, 27);
+		contentPane.add(txtNumber2);
+		txtNumber2.setDocument(new JustNumbers());
 		
-		JLabel lblEqual = new JLabel(" = ");
-		lblEqual.setBounds(335, 70, 16, 14);
-		contentPane.add(lblEqual);
+		txtNumber2_ = new JTextField();
+		txtNumber2_.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		txtNumber2_.setColumns(10);
+		txtNumber2_.setBounds(228, 111, 97, 27);
+		contentPane.add(txtNumber2_);
+		txtNumber2_.setDocument(new JustNumbers());
+		
+		txtNumber3 = new JTextField();
+		txtNumber3.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		txtNumber3.setColumns(10);
+		txtNumber3.setBounds(70, 161, 97, 27);
+		contentPane.add(txtNumber3);
+		txtNumber3.setDocument(new JustNumbers());
+		
+		txtNumber3_ = new JTextField();
+		txtNumber3_.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		txtNumber3_.setColumns(10);
+		txtNumber3_.setBounds(228, 161, 97, 27);
+		contentPane.add(txtNumber3_);
+		txtNumber3_.setDocument(new JustNumbers());
+		
+		txtNumber4 = new JTextField();
+		txtNumber4.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		txtNumber4.setColumns(10);
+		txtNumber4.setBounds(70, 209, 97, 27);
+		contentPane.add(txtNumber4);
+		txtNumber4.setDocument(new JustNumbers());
+		
+		txtNumber4_ = new JTextField();
+		txtNumber4_.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		txtNumber4_.setColumns(10);
+		txtNumber4_.setBounds(228, 209, 97, 27);
+		contentPane.add(txtNumber4_);
+		txtNumber4_.setDocument(new JustNumbers());
+		
+		// Resultados
 		
 		txtResult1 = new JTextField();
 		txtResult1.setBackground(Color.DARK_GRAY);
@@ -106,29 +181,6 @@ public class TelaCalc extends JFrame {
 		txtResult2.setBounds(361, 111, 97, 27);
 		contentPane.add(txtResult2);
 		
-		JLabel lblEqual_1 = new JLabel(" = ");
-		lblEqual_1.setBounds(335, 118, 16, 14);
-		contentPane.add(lblEqual_1);
-		
-		txtNumber2_ = new JTextField();
-		txtNumber2_.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		txtNumber2_.setColumns(10);
-		txtNumber2_.setBounds(228, 111, 97, 27);
-		contentPane.add(txtNumber2_);
-		txtNumber2_.setDocument(new JustNumbers());
-		
-		JLabel lblNewLabel_1 = new JLabel("-");
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		lblNewLabel_1.setBounds(196, 118, 27, 14);
-		contentPane.add(lblNewLabel_1);
-		
-		txtNumber2 = new JTextField();
-		txtNumber2.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		txtNumber2.setColumns(10);
-		txtNumber2.setBounds(70, 111, 97, 27);
-		contentPane.add(txtNumber2);
-		txtNumber2_.setDocument(new JustNumbers());
-		
 		txtResult3 = new JTextField();
 		txtResult3.setBackground(Color.DARK_GRAY);
 		txtResult3.setEnabled(false);
@@ -138,29 +190,6 @@ public class TelaCalc extends JFrame {
 		txtResult3.setBounds(361, 161, 97, 27);
 		contentPane.add(txtResult3);
 		
-		JLabel lblEqual_2 = new JLabel(" = ");
-		lblEqual_2.setBounds(335, 168, 16, 14);
-		contentPane.add(lblEqual_2);
-		
-		txtNumber3_ = new JTextField();
-		txtNumber3_.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		txtNumber3_.setColumns(10);
-		txtNumber3_.setBounds(228, 161, 97, 27);
-		contentPane.add(txtNumber3_);
-		txtNumber3_.setDocument(new JustNumbers());
-		
-		JLabel lblNewLabel_2 = new JLabel("x");
-		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		lblNewLabel_2.setBounds(196, 168, 27, 14);
-		contentPane.add(lblNewLabel_2);
-		
-		txtNumber3 = new JTextField();
-		txtNumber3.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		txtNumber3.setColumns(10);
-		txtNumber3.setBounds(70, 161, 97, 27);
-		contentPane.add(txtNumber3);
-		txtNumber3.setDocument(new JustNumbers());
-		
 		txtResult4 = new JTextField();
 		txtResult4.setBackground(Color.DARK_GRAY);
 		txtResult4.setEnabled(false);
@@ -169,29 +198,6 @@ public class TelaCalc extends JFrame {
 		txtResult4.setColumns(10);
 		txtResult4.setBounds(361, 209, 97, 27);
 		contentPane.add(txtResult4);
-		
-		JLabel lblEqual_3 = new JLabel(" = ");
-		lblEqual_3.setBounds(335, 216, 16, 14);
-		contentPane.add(lblEqual_3);
-		
-		txtNumber4_ = new JTextField();
-		txtNumber4_.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		txtNumber4_.setColumns(10);
-		txtNumber4_.setBounds(228, 209, 97, 27);
-		contentPane.add(txtNumber4_);
-		txtNumber4_.setDocument(new JustNumbers());
-		
-		JLabel lblNewLabel_3 = new JLabel("/");
-		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		lblNewLabel_3.setBounds(196, 216, 27, 14);
-		contentPane.add(lblNewLabel_3);
-		
-		txtNumber4 = new JTextField();
-		txtNumber4.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		txtNumber4.setColumns(10);
-		txtNumber4.setBounds(70, 209, 97, 27);
-		contentPane.add(txtNumber4);
-		txtNumber4.setDocument(new JustNumbers());
 		
 		JButton btnSum = new JButton("Calc");
 		btnSum.setFont(new Font("Tahoma", Font.PLAIN, 13));
@@ -259,8 +265,6 @@ public class TelaCalc extends JFrame {
 		btnClean.setBackground(new Color(112, 128, 144));
 		btnClean.setBounds(284, 294, 89, 28);
 		contentPane.add(btnClean);
-		
-		
 		
 	}	
 }
