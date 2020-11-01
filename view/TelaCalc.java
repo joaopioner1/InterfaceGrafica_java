@@ -15,7 +15,7 @@ import java.awt.event.ActionEvent;
 import java.awt.Color;
 
 public class TelaCalc extends JFrame {
-	//Autor: Joao Vitor Souza Pioner | Data: 29/10/2020
+	//Autor: Joao Vitor Souza Pioner | Data: 31/10/2020
 	
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
