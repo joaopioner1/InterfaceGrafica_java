@@ -199,6 +199,7 @@ public class TelaCalc extends JFrame {
 		txtResult4.setBounds(361, 209, 97, 27);
 		contentPane.add(txtResult4);
 		
+		// Botoes
 		JButton btnSum = new JButton("Calc");
 		btnSum.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		btnSum.setForeground(new Color(255, 255, 255));
