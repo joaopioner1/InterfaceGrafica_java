@@ -17,10 +17,15 @@ public class SecundaryClass {
 		return (a + b + c) / 3;
 	}
 	 
-	 public void ShowPanel() {
-		 
-		 mN.pane1.setVisible(false); //nao mostra o painel
-		 mN.pane2.setVisible(true); //mostra o painel
-		 mN.txtAverage.setText(String.valueOf(CalculaMedia())); //Mostra o texto na tela
+	 public void ShowData() {
+		
+		 mN.txtMedia.setText(String.valueOf(CalculaMedia())); //Mostra o texto na tela
+
+		 double d = Double.parseDouble(mN.txtInputAverage.getText()); // transforma a txtbox de String para double
+		 if (CalculaMedia() >= d) {
+			 mN.txtSituacao.setText("Aluno aprovado!");
+		 } else {
+			 mN.txtSituacao.setText("Aluno reprovado!");
+		 }
 	 }
 }
