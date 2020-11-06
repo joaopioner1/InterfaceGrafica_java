@@ -16,6 +16,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JPasswordField;
+import javax.swing.JCheckBox;
 
 public class Principal extends JFrame {
 	private static final long serialVersionUID = 1L;
@@ -37,7 +38,7 @@ public class Principal extends JFrame {
 	public JPanel contentPane;
 	public JTextField txtUsuario;
 	public JPasswordField txtPassword;
-
+	
 	public Principal() {
 		//PANEL
 		setBackground(new Color(192, 192, 192));
@@ -60,14 +61,14 @@ public class Principal extends JFrame {
 		lblPassword.setFont(new Font("Arial", Font.BOLD, 16));
 		lblPassword.setForeground(new Color(255, 255, 255));
 		lblPassword.setIcon(new ImageIcon(Principal.class.getResource("/login/icons8-esqueci-a-senha-64.png")));
-		lblPassword.setBounds(28, 149, 134, 81);
+		lblPassword.setBounds(28, 132, 134, 81);
 		contentPane.add(lblPassword);
 		
 		JLabel lblUsuario = new JLabel("Usu\u00E1rio:");
 		lblUsuario.setFont(new Font("Arial", Font.BOLD, 16));
 		lblUsuario.setForeground(new Color(255, 255, 255));
 		lblUsuario.setIcon(new ImageIcon(Principal.class.getResource("/login/icons8-login-arredondado-\u00E0-direita-64.png")));
-		lblUsuario.setBounds(28, 47, 338, 91);
+		lblUsuario.setBounds(28, 47, 338, 74);
 		contentPane.add(lblUsuario);
 		
 		//TXTBOX
@@ -78,7 +79,7 @@ public class Principal extends JFrame {
 			}
 		});
 		txtUsuario.setFont(new Font("Arial", Font.PLAIN, 14));
-		txtUsuario.setBounds(97, 101, 269, 33);
+		txtUsuario.setBounds(97, 93, 269, 32);
 		contentPane.add(txtUsuario);
 		txtUsuario.setColumns(10);
 		
@@ -90,7 +91,7 @@ public class Principal extends JFrame {
 		});
 		txtPassword.setFont(new Font("Arial", Font.PLAIN, 14));
 		txtPassword.setColumns(10);
-		txtPassword.setBounds(97, 197, 269, 33);
+		txtPassword.setBounds(97, 180, 269, 33);
 		contentPane.add(txtPassword);
 		
 		//BUTTON
@@ -103,9 +104,28 @@ public class Principal extends JFrame {
 		});
 		btnOk.setFont(new Font("Arial", Font.PLAIN, 14));
 		btnOk.setForeground(new Color(0, 0, 0));
-		btnOk.setBackground(new Color(176, 224, 230));
+		btnOk.setBackground(new Color(192, 192, 192));
 		btnOk.setBounds(175, 250, 89, 32);
 		contentPane.add(btnOk);
+		
+		char senha = txtPassword.getEchoChar(); // VARIAVEL PARA USAR NO CHECKBOX
+		
+		JCheckBox chkSenha = new JCheckBox("Mostrar senha");
+		chkSenha.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) { // ESCONDE E MOSTRA A SENHA
+				
+				if (chkSenha.isSelected()) {
+					txtPassword.setEchoChar('\u0000');
+				} else {
+					txtPassword.setEchoChar(senha);
+				}
+			}
+		});
+		chkSenha.setForeground(new Color(0, 0, 0));
+		chkSenha.setBackground(new Color(112, 128, 144));
+		chkSenha.setFont(new Font("Arial", Font.PLAIN, 12));
+		chkSenha.setBounds(97, 220, 105, 23);
+		contentPane.add(chkSenha);
 	}
 	
 	private void login() {
