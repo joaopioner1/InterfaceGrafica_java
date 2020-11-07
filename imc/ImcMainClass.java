@@ -1,6 +1,5 @@
 package imc;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -91,6 +90,8 @@ public class ImcMainClass extends JFrame {
 		txtResultado.setColumns(10);
 		
 		JButton btnCalcular = new JButton("Calcular");
+		btnCalcular.setForeground(new Color(119, 136, 153));
+		btnCalcular.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
 		btnCalcular.setBackground(new Color(102, 205, 170));
 		btnCalcular.setBounds(191, 66, 89, 74);
 		contentPane.add(btnCalcular);
