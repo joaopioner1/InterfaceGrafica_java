@@ -11,9 +11,9 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
-import javax.swing.JEditorPane;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.SwingConstants;
 
 public class ImcMainClass extends JFrame {
 
@@ -87,26 +87,35 @@ public class ImcMainClass extends JFrame {
 		
 		//txtboxs
 		txtAltura = new JTextField();
+		txtAltura.setFont(new Font("Comic Sans MS", Font.PLAIN, 14));
 		txtAltura.setColumns(10);
 		txtAltura.setBounds(76, 156, 140, 27);
 		contentPane.add(txtAltura);
 		
 		txtResultado = new JTextField();
-		txtResultado.setBounds(115, 204, 101, 27);
+		txtResultado.setFont(new Font("Comic Sans MS", Font.PLAIN, 14));
+		txtResultado.setEditable(false);
+		txtResultado.setBackground(new Color(175, 238, 238));
+		txtResultado.setBounds(115, 210, 101, 27);
 		contentPane.add(txtResultado);
 		txtResultado.setColumns(10);
 		
 		txtPeso = new JTextField();
+		txtPeso.setFont(new Font("Comic Sans MS", Font.PLAIN, 14));
 		txtPeso.setColumns(10);
 		txtPeso.setBounds(64, 118, 152, 27);
 		contentPane.add(txtPeso);
 		
 		txtSexo = new JTextField();
+		txtSexo.setFont(new Font("Comic Sans MS", Font.PLAIN, 14));
 		txtSexo.setColumns(10);
 		txtSexo.setBounds(127, 80, 89, 27);
 		contentPane.add(txtSexo);
 		
 		txtAuxilio = new JTextField();
+		txtAuxilio.setEditable(false);
+		txtAuxilio.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
+		txtAuxilio.setBackground(new Color(175, 238, 238));
 		txtAuxilio.setBounds(10, 242, 206, 54);
 		contentPane.add(txtAuxilio);
 		txtAuxilio.setColumns(10);
@@ -122,19 +131,21 @@ public class ImcMainClass extends JFrame {
 		btnCalcular.setForeground(new Color(119, 136, 153));
 		btnCalcular.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
 		btnCalcular.setBackground(new Color(102, 205, 170));
-		btnCalcular.setBounds(226, 80, 91, 103);
+		btnCalcular.setBounds(226, 83, 91, 92);
 		contentPane.add(btnCalcular);
 		
 		JButton btnLimpar = new JButton("Limpar");
+		btnLimpar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Clas.LimpandoCache();
+			}
+		});
 		btnLimpar.setForeground(new Color(119, 136, 153));
 		btnLimpar.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
 		btnLimpar.setBackground(new Color(102, 205, 170));
 		btnLimpar.setBounds(226, 204, 91, 92);
 		contentPane.add(btnLimpar);
-		
-		
-		
-		
 		
 	}
 }

@@ -11,7 +11,7 @@ public class SecunClass {
 	public double CalculandoIMC() {
 		
 		double peso = Double.parseDouble(mNC.txtPeso.getText().replaceAll(",", ".")); //replaceAll serve para alterar caracteres
-		double altura = Double.parseDouble(mNC.txtAltura.getSelectedText().replaceAll(",", "."));
+		double altura = Double.parseDouble(mNC.txtAltura.getText().replaceAll(",", "."));
 		
 		return peso / (Math.pow(altura, 2)); 
 	}
@@ -20,9 +20,19 @@ public class SecunClass {
 		
 		if (mNC.txtSexo.getText().equals("F")) {
 			if (CalculandoIMC() < 19) {
-				mNC.txtAuxilio.setText("Magreza. Seu IMC deveria ser entre 19 e 23.9");
-				mNC.txtResultado.setText("" + CalculandoIMC()); //passei para String
+				mNC.txtAuxilio.setText("Magreza. IMC ideal: 9 e 23.9");
+				mNC.txtResultado.setText("" + String.format ("%.2f", CalculandoIMC())); //passei para String com o "" e String.format formatei as casas decimais na txtbox
 			}
 		}
+	}
+	
+	public void LimpandoCache() {
+		
+		mNC.txtAltura.setText("");
+		mNC.txtPeso.setText("");
+		mNC.txtSexo.setText("");
+		
+		mNC.txtAuxilio.setText("");
+		mNC.txtResultado.setText("");
 	}
 }	
