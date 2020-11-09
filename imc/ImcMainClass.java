@@ -87,6 +87,12 @@ public class ImcMainClass extends JFrame {
 		
 		//txtboxs
 		txtAltura = new JTextField();
+		txtAltura.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+				Clas.VerificandoIMC();
+			}
+		});
 		txtAltura.setFont(new Font("Comic Sans MS", Font.PLAIN, 14));
 		txtAltura.setColumns(10);
 		txtAltura.setBounds(76, 156, 140, 27);
@@ -131,7 +137,7 @@ public class ImcMainClass extends JFrame {
 		btnCalcular.setForeground(new Color(119, 136, 153));
 		btnCalcular.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
 		btnCalcular.setBackground(new Color(102, 205, 170));
-		btnCalcular.setBounds(226, 83, 91, 92);
+		btnCalcular.setBounds(226, 80, 91, 103);
 		contentPane.add(btnCalcular);
 		
 		JButton btnLimpar = new JButton("Limpar");

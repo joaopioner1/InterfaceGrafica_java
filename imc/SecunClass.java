@@ -23,6 +23,30 @@ public class SecunClass {
 				mNC.txtAuxilio.setText("Magreza. IMC ideal: 9 e 23.9");
 				mNC.txtResultado.setText("" + String.format ("%.2f", CalculandoIMC())); //passei para String com o "" e String.format formatei as casas decimais na txtbox
 			}
+			else if (CalculandoIMC() >= 19 && CalculandoIMC() <= 23.9) {
+				mNC.txtAuxilio.setText("Peso ideal. Parabéns.");
+				mNC.txtResultado.setText("" + String.format ("%.2f", CalculandoIMC()));
+			}
+			else if (CalculandoIMC() > 23.9 && CalculandoIMC() <= 29.9) {
+				mNC.txtAuxilio.setText("Sobrepeso. IMC ideal: 9 e 23.9.");
+				mNC.txtResultado.setText("" + String.format ("%.2f", CalculandoIMC()));
+			}
+			else if (CalculandoIMC() > 29.9 && CalculandoIMC() <= 34.9) {
+				mNC.txtAuxilio.setText("Obesidade 1. IMC ideal: 9 e 23.9.");
+				mNC.txtResultado.setText("" + String.format ("%.2f", CalculandoIMC()));
+			}
+			else if (CalculandoIMC() > 34.9 && CalculandoIMC() <= 38.9) {
+				mNC.txtAuxilio.setText("Obesidade 2. IMC ideal: 9 e 23.9.");
+				mNC.txtResultado.setText("" + String.format ("%.2f", CalculandoIMC()));
+			}
+			else {
+				mNC.txtAuxilio.setText("Obesidade 3. IMC ideal: 9 e 23.9.");
+				mNC.txtResultado.setText("" + String.format ("%.2f", CalculandoIMC()));
+			}
+		}
+		
+		if (1 > 2) {
+			System.out.println();
 		}
 	}
 	
