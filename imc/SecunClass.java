@@ -1,5 +1,7 @@
 package imc;
 
+import java.awt.Font;
+
 public class SecunClass {
 	
 	final ImcMainClass mNC;
@@ -26,6 +28,7 @@ public class SecunClass {
 			else if (CalculandoIMC() >= 19 && CalculandoIMC() <= 23.9) {
 				mNC.txtAuxilio.setText("Peso ideal. Parabéns.");
 				mNC.txtResultado.setText("" + String.format ("%.2f", CalculandoIMC()));
+				mNC.txtAuxilio.setFont(new Font("Comic Sans MS", Font.PLAIN, 15));
 			}
 			else if (CalculandoIMC() > 23.9 && CalculandoIMC() <= 29.9) {
 				mNC.txtAuxilio.setText("Sobrepeso. IMC ideal: 9 e 23.9.");
