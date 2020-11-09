@@ -22,34 +22,58 @@ public class SecunClass {
 		
 		if (mNC.txtSexo.getText().equals("F")) {
 			if (CalculandoIMC() < 19) {
-				mNC.txtAuxilio.setText("Magreza. IMC ideal: 9 e 23.9");
-				mNC.txtResultado.setText("" + String.format ("%.2f", CalculandoIMC())); //passei para String com o "" e String.format formatei as casas decimais na txtbox
+				mNC.txtAuxilio.setText("Magreza. IMC ideal: 19 e 23.9");
+				mNC.txtResultado.setText(String.format ("%.2f", CalculandoIMC())); // String.format formatei as casas decimais na txtbox
 			}
 			else if (CalculandoIMC() >= 19 && CalculandoIMC() <= 23.9) {
 				mNC.txtAuxilio.setText("Peso ideal. Parabéns.");
-				mNC.txtResultado.setText("" + String.format ("%.2f", CalculandoIMC()));
+				mNC.txtResultado.setText(String.format ("%.2f", CalculandoIMC()));
 				mNC.txtAuxilio.setFont(new Font("Comic Sans MS", Font.PLAIN, 15));
 			}
 			else if (CalculandoIMC() > 23.9 && CalculandoIMC() <= 29.9) {
-				mNC.txtAuxilio.setText("Sobrepeso. IMC ideal: 9 e 23.9.");
-				mNC.txtResultado.setText("" + String.format ("%.2f", CalculandoIMC()));
+				mNC.txtAuxilio.setText("Sobrepeso. IMC ideal: 19 e 23.9.");
+				mNC.txtResultado.setText(String.format ("%.2f", CalculandoIMC()));
 			}
 			else if (CalculandoIMC() > 29.9 && CalculandoIMC() <= 34.9) {
-				mNC.txtAuxilio.setText("Obesidade 1. IMC ideal: 9 e 23.9.");
-				mNC.txtResultado.setText("" + String.format ("%.2f", CalculandoIMC()));
+				mNC.txtAuxilio.setText("Obesidade 1. IMC ideal: 19 e 23.9.");
+				mNC.txtResultado.setText(String.format ("%.2f", CalculandoIMC()));
 			}
 			else if (CalculandoIMC() > 34.9 && CalculandoIMC() <= 38.9) {
-				mNC.txtAuxilio.setText("Obesidade 2. IMC ideal: 9 e 23.9.");
-				mNC.txtResultado.setText("" + String.format ("%.2f", CalculandoIMC()));
+				mNC.txtAuxilio.setText("Obesidade 2. IMC ideal: 19 e 23.9.");
+				mNC.txtResultado.setText(String.format ("%.2f", CalculandoIMC()));
 			}
 			else {
-				mNC.txtAuxilio.setText("Obesidade 3. IMC ideal: 9 e 23.9.");
-				mNC.txtResultado.setText("" + String.format ("%.2f", CalculandoIMC()));
+				mNC.txtAuxilio.setText("Obesidade 3. IMC ideal: 19 e 23.9.");
+				mNC.txtResultado.setText(String.format ("%.2f", CalculandoIMC()));
 			}
 		}
 		
-		if (1 > 2) {
-			System.out.println();
+		if (mNC.txtSexo.getText().equals("M")) {
+			if (CalculandoIMC() < 20) {
+				mNC.txtAuxilio.setText("Magreza. IMC ideal: 9 e 23.9");
+				mNC.txtResultado.setText(String.format ("%.2f", CalculandoIMC())); // String.format formatei as casas decimais na txtbox
+			}
+			else if (CalculandoIMC() > 20 && CalculandoIMC() <= 24.9) {
+				mNC.txtAuxilio.setText("Peso ideal. Parabéns.");
+				mNC.txtResultado.setText(String.format ("%.2f", CalculandoIMC()));
+				mNC.txtAuxilio.setFont(new Font("Comic Sans MS", Font.PLAIN, 15));
+			}
+			else if (CalculandoIMC() > 24.9 && CalculandoIMC() <= 29.9) {
+				mNC.txtAuxilio.setText("Sobrepeso. IMC ideal: 19 e 23.9.");
+				mNC.txtResultado.setText(String.format ("%.2f", CalculandoIMC()));
+			}
+			else if (CalculandoIMC() > 30 && CalculandoIMC() <= 34.9) {
+				mNC.txtAuxilio.setText("Obesidade 1. IMC ideal: 19 e 23.9.");
+				mNC.txtResultado.setText(String.format ("%.2f", CalculandoIMC()));
+			}
+			else if (CalculandoIMC() > 34.9 && CalculandoIMC() <= 39.9) {
+				mNC.txtAuxilio.setText("Obesidade 2. IMC ideal: 19 e 23.9.");
+				mNC.txtResultado.setText(String.format ("%.2f", CalculandoIMC()));
+			}
+			else {
+				mNC.txtAuxilio.setText("Obesidade 3. IMC ideal: 19 e 23.9.");
+				mNC.txtResultado.setText(String.format ("%.2f", CalculandoIMC()));
+			}
 		}
 	}
 	

@@ -13,7 +13,6 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.SwingConstants;
 
 public class ImcMainClass extends JFrame {
 
@@ -46,7 +45,7 @@ public class ImcMainClass extends JFrame {
 	public ImcMainClass() {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 341, 347);
+		setBounds(100, 100, 356, 347);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(95, 158, 160));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -95,34 +94,34 @@ public class ImcMainClass extends JFrame {
 		});
 		txtAltura.setFont(new Font("Comic Sans MS", Font.PLAIN, 14));
 		txtAltura.setColumns(10);
-		txtAltura.setBounds(76, 156, 140, 27);
+		txtAltura.setBounds(76, 156, 150, 27);
 		contentPane.add(txtAltura);
 		
 		txtResultado = new JTextField();
 		txtResultado.setFont(new Font("Comic Sans MS", Font.PLAIN, 14));
 		txtResultado.setEditable(false);
 		txtResultado.setBackground(new Color(175, 238, 238));
-		txtResultado.setBounds(115, 210, 101, 27);
+		txtResultado.setBounds(115, 210, 111, 27);
 		contentPane.add(txtResultado);
 		txtResultado.setColumns(10);
 		
 		txtPeso = new JTextField();
 		txtPeso.setFont(new Font("Comic Sans MS", Font.PLAIN, 14));
 		txtPeso.setColumns(10);
-		txtPeso.setBounds(64, 118, 152, 27);
+		txtPeso.setBounds(64, 118, 162, 27);
 		contentPane.add(txtPeso);
 		
 		txtSexo = new JTextField();
 		txtSexo.setFont(new Font("Comic Sans MS", Font.PLAIN, 14));
 		txtSexo.setColumns(10);
-		txtSexo.setBounds(127, 80, 89, 27);
+		txtSexo.setBounds(127, 80, 99, 27);
 		contentPane.add(txtSexo);
 		
 		txtAuxilio = new JTextField();
 		txtAuxilio.setEditable(false);
 		txtAuxilio.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
 		txtAuxilio.setBackground(new Color(175, 238, 238));
-		txtAuxilio.setBounds(10, 242, 206, 54);
+		txtAuxilio.setBounds(10, 242, 216, 54);
 		contentPane.add(txtAuxilio);
 		txtAuxilio.setColumns(10);
 		
@@ -137,7 +136,7 @@ public class ImcMainClass extends JFrame {
 		btnCalcular.setForeground(new Color(119, 136, 153));
 		btnCalcular.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
 		btnCalcular.setBackground(new Color(102, 205, 170));
-		btnCalcular.setBounds(226, 80, 91, 103);
+		btnCalcular.setBounds(239, 80, 91, 103);
 		contentPane.add(btnCalcular);
 		
 		JButton btnLimpar = new JButton("Limpar");
@@ -150,7 +149,7 @@ public class ImcMainClass extends JFrame {
 		btnLimpar.setForeground(new Color(119, 136, 153));
 		btnLimpar.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
 		btnLimpar.setBackground(new Color(102, 205, 170));
-		btnLimpar.setBounds(226, 204, 91, 92);
+		btnLimpar.setBounds(239, 204, 91, 92);
 		contentPane.add(btnLimpar);
 		
 	}
