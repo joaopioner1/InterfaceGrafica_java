@@ -69,13 +69,13 @@ public class ImcMainClass extends JFrame {
 		JLabel lblPeso = new JLabel("Peso:");
 		lblPeso.setFont(new Font("Comic Sans MS", Font.PLAIN, 20));
 		lblPeso.setForeground(new Color(255, 255, 255));
-		lblPeso.setBounds(10, 128, 54, 19);
+		lblPeso.setBounds(10, 164, 54, 19);
 		contentPane.add(lblPeso);
 		
 		lblAltura = new JLabel("Altura:");
 		lblAltura.setForeground(Color.WHITE);
 		lblAltura.setFont(new Font("Comic Sans MS", Font.PLAIN, 20));
-		lblAltura.setBounds(10, 164, 71, 19);
+		lblAltura.setBounds(10, 118, 71, 35);
 		contentPane.add(lblAltura);
 		
 		JLabel lblSexo = new JLabel("Sexo (F/M):");
@@ -94,7 +94,7 @@ public class ImcMainClass extends JFrame {
 		});
 		txtAltura.setFont(new Font("Comic Sans MS", Font.PLAIN, 14));
 		txtAltura.setColumns(10);
-		txtAltura.setBounds(76, 156, 150, 27);
+		txtAltura.setBounds(76, 118, 150, 27);
 		contentPane.add(txtAltura);
 		
 		txtResultado = new JTextField();
@@ -106,9 +106,15 @@ public class ImcMainClass extends JFrame {
 		txtResultado.setColumns(10);
 		
 		txtPeso = new JTextField();
+		txtPeso.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Clas.VerificandoIMC();
+			}
+		});
 		txtPeso.setFont(new Font("Comic Sans MS", Font.PLAIN, 14));
 		txtPeso.setColumns(10);
-		txtPeso.setBounds(64, 118, 162, 27);
+		txtPeso.setBounds(64, 156, 162, 27);
 		contentPane.add(txtPeso);
 		
 		txtSexo = new JTextField();
@@ -149,7 +155,7 @@ public class ImcMainClass extends JFrame {
 		btnLimpar.setForeground(new Color(119, 136, 153));
 		btnLimpar.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
 		btnLimpar.setBackground(new Color(102, 205, 170));
-		btnLimpar.setBounds(239, 204, 91, 92);
+		btnLimpar.setBounds(239, 210, 91, 86);
 		contentPane.add(btnLimpar);
 		
 	}
