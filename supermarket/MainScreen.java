@@ -11,6 +11,8 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class MainScreen extends JFrame {
 
@@ -42,6 +44,7 @@ public class MainScreen extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		//Labels
 		JLabel lblTitle = new JLabel("PIONER'S MERCADO");
 		lblTitle.setForeground(Color.WHITE);
 		lblTitle.setFont(new Font("Arial", Font.BOLD, 24));
@@ -53,50 +56,75 @@ public class MainScreen extends JFrame {
 		lblImageMercado.setBounds(10, 11, 56, 55);
 		contentPane.add(lblImageMercado);
 		
-		JButton btnNewButton = new JButton("");
-		btnNewButton.setBackground(new Color(169, 169, 169));
-		btnNewButton.setIcon(new ImageIcon(MainScreen.class.getResource("/supermarket/32382hamburger_98925.png")));
-		btnNewButton.setBounds(10, 153, 106, 40);
-		contentPane.add(btnNewButton);
+		JLabel lblPergunta = new JLabel("Para onde voc\u00EA dejesa ir?");
+		lblPergunta.setFont(new Font("Arial", Font.PLAIN, 18));
+		lblPergunta.setForeground(new Color(255, 255, 255));
+		lblPergunta.setBounds(10, 96, 227, 22);
+		contentPane.add(lblPergunta);
 		
-		JLabel lblNewLabel = new JLabel("Para onde voc\u00EA dejesa ir?");
-		lblNewLabel.setFont(new Font("Arial", Font.PLAIN, 18));
-		lblNewLabel.setForeground(new Color(255, 255, 255));
-		lblNewLabel.setBounds(10, 96, 227, 22);
-		contentPane.add(lblNewLabel);
+		JLabel lblAlim = new JLabel("Alimentos:");
+		lblAlim.setForeground(new Color(255, 255, 255));
+		lblAlim.setBackground(new Color(255, 255, 255));
+		lblAlim.setFont(new Font("Arial", Font.PLAIN, 14));
+		lblAlim.setBounds(10, 129, 69, 27);
+		contentPane.add(lblAlim);
 		
-		JButton btnNewButton_1 = new JButton("");
-		btnNewButton_1.setIcon(new ImageIcon(MainScreen.class.getResource("/supermarket/1486395297-16-clothes_80572.png")));
-		btnNewButton_1.setBackground(new Color(169, 169, 169));
-		btnNewButton_1.setBounds(156, 153, 106, 40);
-		contentPane.add(btnNewButton_1);
+		JLabel lblRoup = new JLabel("Roupas:");
+		lblRoup.setForeground(Color.WHITE);
+		lblRoup.setFont(new Font("Arial", Font.PLAIN, 14));
+		lblRoup.setBackground(Color.WHITE);
+		lblRoup.setBounds(156, 129, 69, 27);
+		contentPane.add(lblRoup);
 		
-		JButton btnNewButton_2 = new JButton("");
-		btnNewButton_2.setIcon(new ImageIcon(MainScreen.class.getResource("/supermarket/3069182-business-computer-device-office-technology_112722.png")));
-		btnNewButton_2.setBackground(new Color(169, 169, 169));
-		btnNewButton_2.setBounds(301, 153, 106, 40);
-		contentPane.add(btnNewButton_2);
+		JLabel lblTec = new JLabel("Tecnologia:");
+		lblTec.setForeground(Color.WHITE);
+		lblTec.setFont(new Font("Arial", Font.PLAIN, 14));
+		lblTec.setBackground(Color.WHITE);
+		lblTec.setBounds(301, 129, 74, 27);
+		contentPane.add(lblTec);
 		
-		JLabel lblNewLabel_1 = new JLabel("Alimentos:");
-		lblNewLabel_1.setForeground(new Color(255, 255, 255));
-		lblNewLabel_1.setBackground(new Color(255, 255, 255));
-		lblNewLabel_1.setFont(new Font("Arial", Font.PLAIN, 14));
-		lblNewLabel_1.setBounds(10, 129, 69, 27);
-		contentPane.add(lblNewLabel_1);
+		//Botoes
+		JButton btnComida = new JButton("");
+		btnComida.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+				
+			}
+		});
+		btnComida.setBackground(new Color(169, 169, 169));
+		btnComida.setIcon(new ImageIcon(MainScreen.class.getResource("/supermarket/32382hamburger_98925.png")));
+		btnComida.setBounds(10, 153, 106, 40);
+		contentPane.add(btnComida);
 		
-		JLabel lblNewLabel_1_1 = new JLabel("Roupas:");
-		lblNewLabel_1_1.setForeground(Color.WHITE);
-		lblNewLabel_1_1.setFont(new Font("Arial", Font.PLAIN, 14));
-		lblNewLabel_1_1.setBackground(Color.WHITE);
-		lblNewLabel_1_1.setBounds(156, 129, 69, 27);
-		contentPane.add(lblNewLabel_1_1);
+		JButton btnRoupas = new JButton("");
+		btnRoupas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+			}
+		});
+		btnRoupas.setIcon(new ImageIcon(MainScreen.class.getResource("/supermarket/1486395297-16-clothes_80572.png")));
+		btnRoupas.setBackground(new Color(169, 169, 169));
+		btnRoupas.setBounds(156, 153, 106, 40);
+		contentPane.add(btnRoupas);
 		
-		JLabel lblNewLabel_1_2 = new JLabel("Tecnologia:");
-		lblNewLabel_1_2.setForeground(Color.WHITE);
-		lblNewLabel_1_2.setFont(new Font("Arial", Font.PLAIN, 14));
-		lblNewLabel_1_2.setBackground(Color.WHITE);
-		lblNewLabel_1_2.setBounds(301, 129, 74, 27);
-		contentPane.add(lblNewLabel_1_2);
+		JButton btnTecnologia = new JButton("");
+		btnTecnologia.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+			}
+		});
+		btnTecnologia.setIcon(new ImageIcon(MainScreen.class.getResource("/supermarket/3069182-business-computer-device-office-technology_112722.png")));
+		btnTecnologia.setBackground(new Color(169, 169, 169));
+		btnTecnologia.setBounds(301, 153, 106, 40);
+		contentPane.add(btnTecnologia);
+		
+		
+		
+		
+		
+		
 		
 		
 	}
