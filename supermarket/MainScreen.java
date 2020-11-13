@@ -5,7 +5,6 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JTable;
 import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -13,6 +12,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Scrollbar;
 
 public class MainScreen extends JFrame {
 
@@ -87,11 +87,13 @@ public class MainScreen extends JFrame {
 		JButton btnComida = new JButton("");
 		btnComida.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			
+
+				Food food = new Food();
+				food.setVisible(true); //Deixando a JFrame Visivel
 				
 			}
 		});
-		btnComida.setBackground(new Color(169, 169, 169));
+		btnComida.setBackground(new Color(255, 165, 0));
 		btnComida.setIcon(new ImageIcon(MainScreen.class.getResource("/supermarket/32382hamburger_98925.png")));
 		btnComida.setBounds(10, 153, 106, 40);
 		contentPane.add(btnComida);
@@ -104,7 +106,7 @@ public class MainScreen extends JFrame {
 			}
 		});
 		btnRoupas.setIcon(new ImageIcon(MainScreen.class.getResource("/supermarket/1486395297-16-clothes_80572.png")));
-		btnRoupas.setBackground(new Color(169, 169, 169));
+		btnRoupas.setBackground(new Color(255, 165, 0));
 		btnRoupas.setBounds(156, 153, 106, 40);
 		contentPane.add(btnRoupas);
 		
@@ -116,15 +118,9 @@ public class MainScreen extends JFrame {
 			}
 		});
 		btnTecnologia.setIcon(new ImageIcon(MainScreen.class.getResource("/supermarket/3069182-business-computer-device-office-technology_112722.png")));
-		btnTecnologia.setBackground(new Color(169, 169, 169));
+		btnTecnologia.setBackground(new Color(255, 165, 0));
 		btnTecnologia.setBounds(301, 153, 106, 40);
 		contentPane.add(btnTecnologia);
-		
-		
-		
-		
-		
-		
 		
 		
 	}
