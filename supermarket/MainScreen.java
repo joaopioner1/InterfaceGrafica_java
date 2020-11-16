@@ -12,7 +12,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.awt.Scrollbar;
 
 public class MainScreen extends JFrame {
 
@@ -88,8 +87,8 @@ public class MainScreen extends JFrame {
 		btnComida.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				Food food = new Food();
-				food.setVisible(true); //Deixando a JFrame Visivel
+				/*Food food = new Food();
+				food.setVisible(true); //Deixando a JFrame Visivel*/
 				
 			}
 		});
