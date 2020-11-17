@@ -1,6 +1,7 @@
 package supermarket;
 
 import java.awt.BorderLayout;
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -10,11 +11,13 @@ import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
+import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
 import javax.swing.JRadioButton;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JRadioButtonMenuItem;
 
 public class Food_Frame_Pizza extends JFrame {
 
@@ -108,13 +111,12 @@ public class Food_Frame_Pizza extends JFrame {
 		JRadioButton RB_Portuguesa = new JRadioButton("Portuguesa");
 		RB_Portuguesa.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+					
+				ButtonGroup buttonGroup = new javax.swing.ButtonGroup();
 				
-				if (RB_QueijoMilho.isSelected()) {
-					RB_QueijoMilho.setSelected(true);
-					RB_FileFritas.setSelected(false);
-					RB_Portuguesa.setSelected(false);
-
-				}
+				buttonGroup.add(RB_QueijoMilho);
+				buttonGroup.add(RB_FileFritas);
+				buttonGroup.add(RB_Portuguesa);
 			}
 		});
 		RB_Portuguesa.setForeground(new Color(255, 255, 255));
