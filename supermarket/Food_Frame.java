@@ -196,4 +196,5 @@ public class Food_Frame extends JFrame {
 		btnSandwich.setBounds(259, 367, 89, 23);
 		contentPane.add(btnSandwich);
 	}
+	
 }
