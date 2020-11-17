@@ -39,7 +39,7 @@ public class Food_Frame extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 422, 440);
 		contentPane = new JPanel();
-		contentPane.setBackground(new Color(160, 82, 45));
+		contentPane.setBackground(new Color(255, 153, 102));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);

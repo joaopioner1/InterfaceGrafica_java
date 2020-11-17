@@ -91,26 +91,29 @@ public class Food_Frame_Pizza extends JFrame {
 		contentPane.add(txtQuantidadePizza);
 		
 		//RadioButtons
-		JRadioButton RB_QuiejoMilho = new JRadioButton("4 queijos e milho");
-		RB_QuiejoMilho.setFont(new Font("Arial", Font.PLAIN, 14));
-		RB_QuiejoMilho.setForeground(new Color(255, 255, 255));
-		RB_QuiejoMilho.setBackground(new Color(255, 102, 51));
-		RB_QuiejoMilho.setBounds(95, 196, 131, 23);
-		contentPane.add(RB_QuiejoMilho);
+		JRadioButton RB_QueijoMilho = new JRadioButton("4 queijos e milho");
+		RB_QueijoMilho.setFont(new Font("Arial", Font.PLAIN, 14));
+		RB_QueijoMilho.setForeground(new Color(255, 255, 255));
+		RB_QueijoMilho.setBackground(new Color(255, 102, 51));
+		RB_QueijoMilho.setBounds(95, 196, 131, 23);
+		contentPane.add(RB_QueijoMilho);
 		
-		JRadioButton RB_FiIeFritas = new JRadioButton("Fil\u00E9 com fritas");
-		RB_FiIeFritas.setForeground(new Color(255, 255, 255));
-		RB_FiIeFritas.setFont(new Font("Arial", Font.PLAIN, 14));
-		RB_FiIeFritas.setBackground(new Color(255, 102, 51));
-		RB_FiIeFritas.setBounds(95, 222, 123, 23);
-		contentPane.add(RB_FiIeFritas);
+		JRadioButton RB_FileFritas = new JRadioButton("Fil\u00E9 com fritas");
+		RB_FileFritas.setForeground(new Color(255, 255, 255));
+		RB_FileFritas.setFont(new Font("Arial", Font.PLAIN, 14));
+		RB_FileFritas.setBackground(new Color(255, 102, 51));
+		RB_FileFritas.setBounds(95, 222, 123, 23);
+		contentPane.add(RB_FileFritas);
 		
 		JRadioButton RB_Portuguesa = new JRadioButton("Portuguesa");
 		RB_Portuguesa.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				if (RB_QuiejoMilho.isSelected()) {
-					RB_FiIeFritas.isSelected();
+				if (RB_QueijoMilho.isSelected()) {
+					RB_QueijoMilho.setSelected(true);
+					RB_FileFritas.setSelected(false);
+					RB_Portuguesa.setSelected(false);
+
 				}
 			}
 		});
