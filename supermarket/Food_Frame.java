@@ -11,6 +11,8 @@ import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import java.awt.Font;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Food_Frame extends JFrame {
 
@@ -113,6 +115,13 @@ public class Food_Frame extends JFrame {
 		
 		//Bottons
 		JButton btnPizza = new JButton("Comprar");
+		btnPizza.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Food_Frame_Pizza foodFramePizza = new Food_Frame_Pizza();
+				foodFramePizza.setVisible(true);
+			}
+		});
 		btnPizza.setBackground(new Color(105, 105, 105));
 		btnPizza.setFont(new Font("Arial", Font.BOLD, 12));
 		btnPizza.setForeground(new Color(255, 255, 255));

@@ -87,8 +87,8 @@ public class MainScreen extends JFrame {
 		btnComida.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				/*Food food = new Food();
-				food.setVisible(true); //Deixando a JFrame Visivel*/
+				Food_Frame food = new Food_Frame();
+				food.setVisible(true); //Deixando a JFrame Visivel
 				
 			}
 		});

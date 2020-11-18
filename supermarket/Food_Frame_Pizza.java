@@ -112,7 +112,11 @@ public class Food_Frame_Pizza extends JFrame {
 		RB_Portuguesa.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
+				ButtonGroup buttonGroup = new javax.swing.ButtonGroup();
 				
+				buttonGroup.add(RB_QueijoMilho); // Permite usuario selecionar apenas um JRadioButton
+				buttonGroup.add(RB_FileFritas);
+				buttonGroup.add(RB_Portuguesa);
 			}
 		});
 		RB_Portuguesa.setForeground(new Color(255, 255, 255));
@@ -126,7 +130,8 @@ public class Food_Frame_Pizza extends JFrame {
 		btnProsseguir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				
+				Buying_Pizza buyPizza = new Buying_Pizza();
+				buyPizza.setVisible(true);
 			}
 		});
 		btnProsseguir.setForeground(Color.WHITE);
