@@ -111,12 +111,8 @@ public class Food_Frame_Pizza extends JFrame {
 		JRadioButton RB_Portuguesa = new JRadioButton("Portuguesa");
 		RB_Portuguesa.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-					
-				ButtonGroup buttonGroup = new javax.swing.ButtonGroup();
 				
-				buttonGroup.add(RB_QueijoMilho);
-				buttonGroup.add(RB_FileFritas);
-				buttonGroup.add(RB_Portuguesa);
+				
 			}
 		});
 		RB_Portuguesa.setForeground(new Color(255, 255, 255));
@@ -129,6 +125,8 @@ public class Food_Frame_Pizza extends JFrame {
 		JButton btnProsseguir = new JButton("Prosseguir");
 		btnProsseguir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				
 			}
 		});
 		btnProsseguir.setForeground(Color.WHITE);

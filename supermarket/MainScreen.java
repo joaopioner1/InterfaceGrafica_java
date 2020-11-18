@@ -18,7 +18,7 @@ public class MainScreen extends JFrame {
 	
 	private static final long serialVersionUID = 1L;
 	
-	//Autor: Joao Vitor Souza Pioner | Data: 9/11/2020 8:16
+	//Autor: Joao Vitor Souza Pioner | Data: 9/11/2020 8:16 ultima modificacao: 21:26 h
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
