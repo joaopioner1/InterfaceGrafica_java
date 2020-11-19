@@ -10,7 +10,10 @@ public class Class_Code_Pizza {
 	
 	public void ValorProduto() {
 		
+		int a = Integer.parseInt(buying.txtQuantidadePizza.getText()); //Passa para numero inteiro
+		double calculandoPreco = a * 2.00;
 		
+		buying.txtValorTotal.setText("" + calculandoPreco);
 	}
 	
 }
