@@ -25,6 +25,7 @@ public class Food_Frame_Pizza extends JFrame {
 	private JPanel contentPane;
 	private JTextField txtPrecoPizza;
 	private JTextField txtQuantidadePizza;
+	private JTextField txtValorTotal;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -41,7 +42,7 @@ public class Food_Frame_Pizza extends JFrame {
 
 	public Food_Frame_Pizza() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 393, 384);
+		setBounds(100, 100, 393, 420);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(255, 102, 51));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -75,7 +76,7 @@ public class Food_Frame_Pizza extends JFrame {
 		JLabel lblSabores = new JLabel("Sabores:");
 		lblSabores.setForeground(Color.WHITE);
 		lblSabores.setFont(new Font("Arial", Font.BOLD, 18));
-		lblSabores.setBounds(10, 191, 79, 28);
+		lblSabores.setBounds(10, 240, 79, 28);
 		contentPane.add(lblSabores);
 		
 		//TxtBox
@@ -98,14 +99,14 @@ public class Food_Frame_Pizza extends JFrame {
 		RB_QueijoMilho.setFont(new Font("Arial", Font.PLAIN, 14));
 		RB_QueijoMilho.setForeground(new Color(255, 255, 255));
 		RB_QueijoMilho.setBackground(new Color(255, 102, 51));
-		RB_QueijoMilho.setBounds(95, 196, 131, 23);
+		RB_QueijoMilho.setBounds(95, 244, 131, 23);
 		contentPane.add(RB_QueijoMilho);
 		
 		JRadioButton RB_FileFritas = new JRadioButton("Fil\u00E9 com fritas");
 		RB_FileFritas.setForeground(new Color(255, 255, 255));
 		RB_FileFritas.setFont(new Font("Arial", Font.PLAIN, 14));
 		RB_FileFritas.setBackground(new Color(255, 102, 51));
-		RB_FileFritas.setBounds(95, 222, 123, 23);
+		RB_FileFritas.setBounds(95, 270, 123, 23);
 		contentPane.add(RB_FileFritas);
 		
 		JRadioButton RB_Portuguesa = new JRadioButton("Portuguesa");
@@ -122,7 +123,7 @@ public class Food_Frame_Pizza extends JFrame {
 		RB_Portuguesa.setForeground(new Color(255, 255, 255));
 		RB_Portuguesa.setFont(new Font("Arial", Font.PLAIN, 14));
 		RB_Portuguesa.setBackground(new Color(255, 102, 51));
-		RB_Portuguesa.setBounds(95, 248, 109, 23);
+		RB_Portuguesa.setBounds(95, 296, 109, 23);
 		contentPane.add(RB_Portuguesa);
 		
 		//Buttons
@@ -137,7 +138,20 @@ public class Food_Frame_Pizza extends JFrame {
 		btnProsseguir.setForeground(Color.WHITE);
 		btnProsseguir.setFont(new Font("Arial", Font.BOLD, 18));
 		btnProsseguir.setBackground(new Color(189, 183, 107));
-		btnProsseguir.setBounds(95, 294, 185, 40);
+		btnProsseguir.setBounds(86, 330, 205, 40);
 		contentPane.add(btnProsseguir);
+		
+		JLabel lblValorTotal = new JLabel("Valor total:");
+		lblValorTotal.setForeground(Color.WHITE);
+		lblValorTotal.setFont(new Font("Arial", Font.BOLD, 18));
+		lblValorTotal.setBackground(Color.WHITE);
+		lblValorTotal.setBounds(10, 192, 96, 24);
+		contentPane.add(lblValorTotal);
+		
+		txtValorTotal = new JTextField();
+		txtValorTotal.setFont(new Font("Arial", Font.PLAIN, 18));
+		txtValorTotal.setColumns(10);
+		txtValorTotal.setBounds(108, 191, 68, 27);
+		contentPane.add(txtValorTotal);
 	}
 }

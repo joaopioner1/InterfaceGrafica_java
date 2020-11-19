@@ -1,6 +1,5 @@
 package supermarket;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -13,7 +12,6 @@ import javax.swing.JOptionPane;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.ImageIcon;
-import javax.swing.JComboBox;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -22,9 +20,9 @@ public class Buying_Pizza extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
+	private JTextField txtNumeroCartao;
+	private JTextField txtData;
+	private JTextField txtCodigoSeg;
 	private JTextField txtCPF;
 
 	
@@ -46,7 +44,7 @@ public class Buying_Pizza extends JFrame {
 	 */
 	public Buying_Pizza() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 395, 318);
+		setBounds(100, 100, 395, 341);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(255, 99, 71));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -54,24 +52,24 @@ public class Buying_Pizza extends JFrame {
 		contentPane.setLayout(null);
 		
 		//TxtBoxs
-		textField = new JTextField();
-		textField.setFont(new Font("Arial", Font.PLAIN, 14));
-		textField.setBounds(112, 59, 254, 24);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		txtNumeroCartao = new JTextField();
+		txtNumeroCartao.setFont(new Font("Arial", Font.PLAIN, 14));
+		txtNumeroCartao.setBounds(112, 59, 254, 24);
+		contentPane.add(txtNumeroCartao);
+		txtNumeroCartao.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setText("       /");
-		textField_1.setFont(new Font("Arial", Font.PLAIN, 14));
-		textField_1.setColumns(10);
-		textField_1.setBounds(159, 133, 68, 24);
-		contentPane.add(textField_1);
+		txtData = new JTextField();
+		txtData.setText("       /");
+		txtData.setFont(new Font("Arial", Font.PLAIN, 14));
+		txtData.setColumns(10);
+		txtData.setBounds(159, 133, 68, 24);
+		contentPane.add(txtData);
 		
-		textField_2 = new JTextField();
-		textField_2.setFont(new Font("Arial", Font.PLAIN, 14));
-		textField_2.setBounds(190, 94, 37, 24);
-		contentPane.add(textField_2);
-		textField_2.setColumns(10);
+		txtCodigoSeg = new JTextField();
+		txtCodigoSeg.setFont(new Font("Arial", Font.PLAIN, 14));
+		txtCodigoSeg.setBounds(190, 94, 37, 24);
+		contentPane.add(txtCodigoSeg);
+		txtCodigoSeg.setColumns(10);
 		
 		txtCPF = new JTextField();
 		txtCPF.setFont(new Font("Arial", Font.PLAIN, 12));
@@ -86,55 +84,55 @@ public class Buying_Pizza extends JFrame {
 		lblFinalizandoCompra.setBounds(44, 11, 262, 24);
 		contentPane.add(lblFinalizandoCompra);
 		
-		JLabel lblNewLabel = new JLabel("N\u00BA do cart\u00E3o:");
-		lblNewLabel.setForeground(new Color(255, 255, 255));
-		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 16));
-		lblNewLabel.setBounds(10, 57, 100, 24);
-		contentPane.add(lblNewLabel);
+		JLabel lblNCartao = new JLabel("N\u00BA do cart\u00E3o:");
+		lblNCartao.setForeground(new Color(255, 255, 255));
+		lblNCartao.setFont(new Font("Arial", Font.BOLD, 16));
+		lblNCartao.setBounds(10, 57, 100, 24);
+		contentPane.add(lblNCartao);
 		
-		JLabel lblNewLabel_1 = new JLabel("Data (vencimento):");
-		lblNewLabel_1.setForeground(new Color(255, 255, 255));
-		lblNewLabel_1.setBackground(new Color(255, 255, 255));
-		lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 16));
-		lblNewLabel_1.setBounds(10, 135, 152, 16);
-		contentPane.add(lblNewLabel_1);
+		JLabel lblData = new JLabel("Data (vencimento):");
+		lblData.setForeground(new Color(255, 255, 255));
+		lblData.setBackground(new Color(255, 255, 255));
+		lblData.setFont(new Font("Arial", Font.BOLD, 16));
+		lblData.setBounds(10, 135, 152, 16);
+		contentPane.add(lblData);
 		
-		JLabel lblNewLabel_1_1 = new JLabel("C\u00F3digo de seguran\u00E7a:");
-		lblNewLabel_1_1.setForeground(Color.WHITE);
-		lblNewLabel_1_1.setFont(new Font("Arial", Font.BOLD, 16));
-		lblNewLabel_1_1.setBackground(Color.WHITE);
-		lblNewLabel_1_1.setBounds(10, 94, 170, 20);
-		contentPane.add(lblNewLabel_1_1);
+		JLabel lblCodigoSeg = new JLabel("C\u00F3digo de seguran\u00E7a:");
+		lblCodigoSeg.setForeground(Color.WHITE);
+		lblCodigoSeg.setFont(new Font("Arial", Font.BOLD, 16));
+		lblCodigoSeg.setBackground(Color.WHITE);
+		lblCodigoSeg.setBounds(10, 94, 170, 20);
+		contentPane.add(lblCodigoSeg);
 		
-		JLabel lblNewLabel_1_2 = new JLabel("CPF:");
-		lblNewLabel_1_2.setForeground(Color.WHITE);
-		lblNewLabel_1_2.setFont(new Font("Arial", Font.BOLD, 16));
-		lblNewLabel_1_2.setBackground(Color.WHITE);
-		lblNewLabel_1_2.setBounds(10, 179, 45, 16);
-		contentPane.add(lblNewLabel_1_2);
+		JLabel lblCPF = new JLabel("CPF:");
+		lblCPF.setForeground(Color.WHITE);
+		lblCPF.setFont(new Font("Arial", Font.BOLD, 16));
+		lblCPF.setBackground(Color.WHITE);
+		lblCPF.setBounds(10, 179, 45, 16);
+		contentPane.add(lblCPF);
 		
-		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon(Buying_Pizza.class.getResource("/supermarket/cartao-de-credito (1).png")));
-		lblNewLabel_2.setBounds(237, 81, 129, 120);
-		contentPane.add(lblNewLabel_2);
+		JLabel lblImagemCartao = new JLabel("");
+		lblImagemCartao.setIcon(new ImageIcon(Buying_Pizza.class.getResource("/supermarket/cartao-de-credito (1).png")));
+		lblImagemCartao.setBounds(237, 81, 129, 120);
+		contentPane.add(lblImagemCartao);
 		
-		JLabel lblNewLabel_3 = new JLabel("");
-		lblNewLabel_3.setIcon(new ImageIcon(Buying_Pizza.class.getResource("/supermarket/cadeado (3).png")));
-		lblNewLabel_3.setBounds(10, 11, 24, 24);
-		contentPane.add(lblNewLabel_3);
+		JLabel lblCadeado = new JLabel("");
+		lblCadeado.setIcon(new ImageIcon(Buying_Pizza.class.getResource("/supermarket/cadeado (3).png")));
+		lblCadeado.setBounds(10, 11, 24, 24);
+		contentPane.add(lblCadeado);
 		
 		//Button
-		JButton btnNewButton = new JButton("Finalizar");
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton btnFinalizar = new JButton("Finalizar");
+		btnFinalizar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 				JOptionPane.showConfirmDialog(null, "Compra finalizada com sucesso! Obrigado pela preferência, volte sempre.");
 			}
 		});
-		btnNewButton.setForeground(new Color(255, 255, 255));
-		btnNewButton.setBackground(new Color(119, 136, 153));
-		btnNewButton.setFont(new Font("Arial", Font.BOLD, 24));
-		btnNewButton.setBounds(72, 230, 234, 38);
-		contentPane.add(btnNewButton);
+		btnFinalizar.setForeground(new Color(255, 255, 255));
+		btnFinalizar.setBackground(new Color(119, 136, 153));
+		btnFinalizar.setFont(new Font("Arial", Font.BOLD, 24));
+		btnFinalizar.setBounds(72, 237, 234, 38);
+		contentPane.add(btnFinalizar);
 	}
 }

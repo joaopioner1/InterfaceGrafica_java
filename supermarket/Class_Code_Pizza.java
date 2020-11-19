@@ -2,11 +2,15 @@ package supermarket;
 
 public class Class_Code_Pizza {
 	
-	final Buying_Pizza bP;
+	final Food_Frame_Pizza buying;
 
-	public Buying_Pizza(Class_Code_Pizza classCodePizza) { // recebe a tela como parâmetro ao invés de instanciar novamente
-		this.fFP = classCodePizza;
+	public Class_Code_Pizza(Food_Frame_Pizza buy) { // recebe a tela como parâmetro ao invés de instanciar novamente
+		this.buying = buy;
 	}
 	
+	public void ValorProduto() {
+		
+		
+	}
 	
 }
