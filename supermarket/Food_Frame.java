@@ -122,7 +122,7 @@ public class Food_Frame extends JFrame {
 				foodFramePizza.setVisible(true);
 			}
 		});
-		btnPizza.setBackground(new Color(105, 105, 105));
+		btnPizza.setBackground(new Color(169, 169, 169));
 		btnPizza.setFont(new Font("Arial", Font.BOLD, 12));
 		btnPizza.setForeground(new Color(255, 255, 255));
 		btnPizza.setBounds(66, 63, 89, 23);
@@ -130,55 +130,55 @@ public class Food_Frame extends JFrame {
 		
 		JButton btnCrossaint = new JButton("Comprar");
 		btnCrossaint.setForeground(new Color(255, 255, 255));
-		btnCrossaint.setBackground(new Color(105, 105, 105));
+		btnCrossaint.setBackground(new Color(169, 169, 169));
 		btnCrossaint.setFont(new Font("Arial", Font.BOLD, 12));
 		btnCrossaint.setBounds(66, 129, 89, 23);
 		contentPane.add(btnCrossaint);
 		
 		JButton btnEgg = new JButton("Comprar");
 		btnEgg.setForeground(new Color(255, 255, 255));
-		btnEgg.setBackground(new Color(105, 105, 105));
+		btnEgg.setBackground(new Color(169, 169, 169));
 		btnEgg.setFont(new Font("Arial", Font.BOLD, 12));
 		btnEgg.setBounds(66, 189, 89, 23);
 		contentPane.add(btnEgg);
 		
 		JButton btnChocolate = new JButton("Comprar");
-		btnChocolate.setBackground(new Color(105, 105, 105));
+		btnChocolate.setBackground(new Color(169, 169, 169));
 		btnChocolate.setForeground(new Color(255, 255, 255));
 		btnChocolate.setFont(new Font("Arial", Font.BOLD, 12));
 		btnChocolate.setBounds(66, 251, 89, 23);
 		contentPane.add(btnChocolate);
 		
 		JButton btnHoney = new JButton("Comprar");
-		btnHoney.setBackground(new Color(105, 105, 105));
+		btnHoney.setBackground(new Color(169, 169, 169));
 		btnHoney.setForeground(new Color(255, 255, 255));
 		btnHoney.setFont(new Font("Arial", Font.BOLD, 12));
 		btnHoney.setBounds(66, 313, 89, 23);
 		contentPane.add(btnHoney);
 		
 		JButton btnCheese = new JButton("Comprar");
-		btnCheese.setBackground(new Color(105, 105, 105));
+		btnCheese.setBackground(new Color(169, 169, 169));
 		btnCheese.setForeground(new Color(255, 255, 255));
-		btnCheese.setFont(new Font("Arial", Font.PLAIN, 12));
+		btnCheese.setFont(new Font("Arial", Font.BOLD, 12));
 		btnCheese.setBounds(66, 367, 89, 23);
 		contentPane.add(btnCheese);
 		
 		JButton btnPopCorn = new JButton("Comprar");
 		btnPopCorn.setForeground(new Color(255, 255, 255));
-		btnPopCorn.setBackground(new Color(105, 105, 105));
+		btnPopCorn.setBackground(new Color(169, 169, 169));
 		btnPopCorn.setFont(new Font("Arial", Font.BOLD, 12));
 		btnPopCorn.setBounds(259, 63, 89, 23);
 		contentPane.add(btnPopCorn);
 		
 		JButton btnBread = new JButton("Comprar");
 		btnBread.setForeground(new Color(255, 255, 255));
-		btnBread.setBackground(new Color(105, 105, 105));
-		btnBread.setFont(new Font("Arial", Font.PLAIN, 12));
+		btnBread.setBackground(new Color(169, 169, 169));
+		btnBread.setFont(new Font("Arial", Font.BOLD, 12));
 		btnBread.setBounds(259, 129, 89, 23);
 		contentPane.add(btnBread);
 		
 		JButton btnFrenchFries = new JButton("Comprar");
-		btnFrenchFries.setBackground(new Color(105, 105, 105));
+		btnFrenchFries.setBackground(new Color(169, 169, 169));
 		btnFrenchFries.setForeground(new Color(255, 255, 255));
 		btnFrenchFries.setFont(new Font("Arial", Font.BOLD, 12));
 		btnFrenchFries.setBounds(259, 189, 89, 23);
@@ -186,22 +186,22 @@ public class Food_Frame extends JFrame {
 		
 		JButton btnSteak = new JButton("Comprar");
 		btnSteak.setForeground(new Color(255, 255, 255));
-		btnSteak.setBackground(new Color(105, 105, 105));
-		btnSteak.setFont(new Font("Arial", Font.PLAIN, 12));
+		btnSteak.setBackground(new Color(169, 169, 169));
+		btnSteak.setFont(new Font("Arial", Font.BOLD, 12));
 		btnSteak.setBounds(259, 251, 89, 23);
 		contentPane.add(btnSteak);
 		
 		JButton btnSalad = new JButton("Comprar");
 		btnSalad.setForeground(new Color(255, 255, 255));
-		btnSalad.setBackground(new Color(105, 105, 105));
+		btnSalad.setBackground(new Color(169, 169, 169));
 		btnSalad.setFont(new Font("Arial", Font.BOLD, 12));
 		btnSalad.setBounds(259, 313, 89, 23);
 		contentPane.add(btnSalad);
 		
 		JButton btnSandwich = new JButton("Comprar");
 		btnSandwich.setForeground(new Color(255, 255, 255));
-		btnSandwich.setBackground(new Color(105, 105, 105));
-		btnSandwich.setFont(new Font("Arial", Font.PLAIN, 12));
+		btnSandwich.setBackground(new Color(169, 169, 169));
+		btnSandwich.setFont(new Font("Arial", Font.BOLD, 12));
 		btnSandwich.setBounds(259, 367, 89, 23);
 		contentPane.add(btnSandwich);
 	}

@@ -25,7 +25,7 @@ public class Buying_Pizza extends JFrame {
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
-	private JTextField textField_3;
+	private JTextField txtCPF;
 
 	
 	public static void main(String[] args) {
@@ -73,11 +73,11 @@ public class Buying_Pizza extends JFrame {
 		contentPane.add(textField_2);
 		textField_2.setColumns(10);
 		
-		textField_3 = new JTextField();
-		textField_3.setFont(new Font("Arial", Font.PLAIN, 12));
-		textField_3.setColumns(10);
-		textField_3.setBounds(52, 177, 175, 24);
-		contentPane.add(textField_3);
+		txtCPF = new JTextField();
+		txtCPF.setFont(new Font("Arial", Font.PLAIN, 12));
+		txtCPF.setColumns(10);
+		txtCPF.setBounds(52, 177, 175, 24);
+		contentPane.add(txtCPF);
 		
 		//Labels
 		JLabel lblFinalizandoCompra = new JLabel("Finalizando a compra");
