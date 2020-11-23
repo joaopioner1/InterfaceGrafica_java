@@ -7,5 +7,8 @@ public class Code_Class {
 		public Code_Class(Tela tL) { // recebe a tela como parâmetro ao invés de instanciar novamente
 			this.tl = tL;
 		}
-
+		
+		public void Calcular() {
+			
+		}
 }

@@ -144,8 +144,15 @@ public class Tela extends JFrame {
 		btnNewButton.setBackground(new Color(176, 196, 222));
 		btnNewButton.setForeground(new Color(255, 255, 255));
 		btnNewButton.setFont(new Font("Arial", Font.BOLD, 14));
-		btnNewButton.setBounds(101, 189, 116, 36);
+		btnNewButton.setBounds(39, 179, 116, 27);
 		contentPane.add(btnNewButton);
+		
+		JButton btnLimpar = new JButton("LIMPAR");
+		btnLimpar.setForeground(Color.WHITE);
+		btnLimpar.setFont(new Font("Arial", Font.BOLD, 14));
+		btnLimpar.setBackground(new Color(176, 196, 222));
+		btnLimpar.setBounds(166, 179, 116, 27);
+		contentPane.add(btnLimpar);
 		
 		
 	}
