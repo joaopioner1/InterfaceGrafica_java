@@ -1,13 +1,10 @@
 package bhaskara;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
-import school.SecundaryClass;
 
 import java.awt.Color;
 import javax.swing.JLabel;
@@ -19,13 +16,9 @@ import java.awt.event.ActionEvent;
 
 public class Tela extends JFrame {
 
-	private JPanel contentPane;
-	private JTextField txtA;
-	private JTextField txtB;
-	private JTextField txtC;
-	private JTextField txtX;
-	private JTextField txtY;
-
+	
+	private static final long serialVersionUID = 1L;
+	
 	//Autor: Joao Vitor Souza Pioner Data: 23/11/2020
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -42,6 +35,13 @@ public class Tela extends JFrame {
 	
 	private Code_Class codeClass = new Code_Class(this);
 	
+	private JPanel contentPane;
+	public JTextField txtA;
+	public JTextField txtB;
+	public JTextField txtC;
+	public JTextField txtX;
+	public JTextField txtY;
+
 	public Tela() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 340, 275);
@@ -139,6 +139,8 @@ public class Tela extends JFrame {
 		JButton btnNewButton = new JButton("CALCULAR");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				codeClass.MostrandoDados();
 			}
 		});
 		btnNewButton.setBackground(new Color(176, 196, 222));
@@ -148,6 +150,12 @@ public class Tela extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		JButton btnLimpar = new JButton("LIMPAR");
+		btnLimpar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				codeClass.LimparCampos();
+			}
+		});
 		btnLimpar.setForeground(Color.WHITE);
 		btnLimpar.setFont(new Font("Arial", Font.BOLD, 14));
 		btnLimpar.setBackground(new Color(176, 196, 222));
