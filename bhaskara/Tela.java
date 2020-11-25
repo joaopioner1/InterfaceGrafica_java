@@ -73,7 +73,7 @@ public class Tela extends JFrame {
 		JLabel lblResultados = new JLabel("Resultados:");
 		lblResultados.setForeground(new Color(176, 196, 222));
 		lblResultados.setFont(new Font("Arial", Font.BOLD, 16));
-		lblResultados.setBounds(180, 45, 102, 19);
+		lblResultados.setBounds(173, 41, 102, 19);
 		contentPane.add(lblResultados);
 		
 		JLabel lblA_1 = new JLabel("B = ");
@@ -91,13 +91,13 @@ public class Tela extends JFrame {
 		JLabel lblX = new JLabel("X = ");
 		lblX.setForeground(new Color(152, 251, 152));
 		lblX.setFont(new Font("Arial", Font.BOLD, 16));
-		lblX.setBounds(177, 80, 28, 14);
+		lblX.setBounds(173, 80, 28, 14);
 		contentPane.add(lblX);
 		
 		JLabel lblY = new JLabel("Y = ");
 		lblY.setForeground(new Color(144, 238, 144));
 		lblY.setFont(new Font("Arial", Font.BOLD, 16));
-		lblY.setBounds(177, 110, 28, 14);
+		lblY.setBounds(173, 110, 28, 14);
 		contentPane.add(lblY);
 		
 		//TEXTBOXES
@@ -124,7 +124,7 @@ public class Tela extends JFrame {
 		txtX.setFont(new Font("Arial", Font.PLAIN, 14));
 		txtX.setBackground(new Color(176, 196, 222));
 		txtX.setColumns(10);
-		txtX.setBounds(217, 76, 95, 27);
+		txtX.setBounds(205, 75, 95, 27);
 		contentPane.add(txtX);
 		
 		txtY = new JTextField();
@@ -132,21 +132,21 @@ public class Tela extends JFrame {
 		txtY.setFont(new Font("Arial", Font.PLAIN, 14));
 		txtY.setBackground(new Color(176, 196, 222));
 		txtY.setColumns(10);
-		txtY.setBounds(217, 106, 95, 27);
+		txtY.setBounds(205, 105, 95, 27);
 		contentPane.add(txtY);
 		
 		//BUTTON
-		JButton btnNewButton = new JButton("CALCULAR");
+		JButton btnNewButton = new JButton("CALCULA");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 				codeClass.MostrandoDados();
 			}
 		});
-		btnNewButton.setBackground(new Color(176, 196, 222));
+		btnNewButton.setBackground(new Color(144, 238, 144));
 		btnNewButton.setForeground(new Color(255, 255, 255));
-		btnNewButton.setFont(new Font("Arial", Font.BOLD, 14));
-		btnNewButton.setBounds(39, 179, 116, 27);
+		btnNewButton.setFont(new Font("Arial", Font.BOLD, 12));
+		btnNewButton.setBounds(50, 179, 95, 27);
 		contentPane.add(btnNewButton);
 		
 		JButton btnLimpar = new JButton("LIMPAR");
@@ -157,9 +157,9 @@ public class Tela extends JFrame {
 			}
 		});
 		btnLimpar.setForeground(Color.WHITE);
-		btnLimpar.setFont(new Font("Arial", Font.BOLD, 14));
-		btnLimpar.setBackground(new Color(176, 196, 222));
-		btnLimpar.setBounds(166, 179, 116, 27);
+		btnLimpar.setFont(new Font("Arial", Font.BOLD, 12));
+		btnLimpar.setBackground(new Color(144, 238, 144));
+		btnLimpar.setBounds(180, 179, 95, 27);
 		contentPane.add(btnLimpar);
 		
 		
